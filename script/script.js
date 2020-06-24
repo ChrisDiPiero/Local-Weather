@@ -49,8 +49,6 @@ class WeatherData {
 
 const apiKey = '35212c2362c920fb78bcfbc661e77b86';
 
-// let url =
-//     'https://api.openweathermap.org/data/2.5/weather?q=san+antonio&APPID=' + apiKey;
 
 $.ajax({
     url: "https://freegeoip.app/json/",
@@ -60,7 +58,7 @@ $.ajax({
     .done(function(json) {
         let lat = json.latitude;
         let lon = json.longitude;
-        $("<span>").text(`${json.city}( ...maybe?)`).appendTo("#weatherHead");
+        $("<span>").text(`${json.city} ...maybe`).appendTo("#weatherHead");
         url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
         console.log(json);
         getWeatherData();
