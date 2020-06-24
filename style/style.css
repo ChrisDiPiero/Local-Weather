@@ -1,0 +1,8 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px 120px;
+}
+
+.wrapper div {
+    text-align: center;
+}
